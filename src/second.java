@@ -18,7 +18,7 @@ public class second {
         String name = sc.nextLine();
         String line;
         StringBuffer responseContent = new StringBuffer();
-        URL url = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=" + name + "&apikey=HIOOYZ15LELZLW0A");
+        URL url = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=" + name + "&apikey=*********");
         connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         System.out.println(connection.getResponseMessage());
