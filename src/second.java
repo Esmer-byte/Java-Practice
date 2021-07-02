@@ -43,8 +43,8 @@ public class second {
         JSONArray prices = new JSONArray(responseBody);
         JSONObject meta = (JSONObject) prices.get(0);
         JSONObject meta_label = (JSONObject) meta.get("Time Series (Daily)");
-        JSONObject meta_date = (JSONObject) meta1.get("2021-07-01");
-        String meta_price = meta2.getString("1. open");
+        JSONObject meta_date = (JSONObject) meta_label.get("2021-07-01");
+        String meta_price = meta_date.getString("1. open");
         System.out.println(meta_price);
 
     }
