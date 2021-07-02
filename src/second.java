@@ -42,10 +42,10 @@ public class second {
     public static void parse(String responseBody) {
         JSONArray prices = new JSONArray(responseBody);
         JSONObject meta = (JSONObject) prices.get(0);
-        JSONObject meta1 = (JSONObject) meta.get("Time Series (Daily)");
-        JSONObject meta2 = (JSONObject) meta1.get("2021-07-01");
-        String price = meta2.getString("1. open");
-        System.out.println(price);
+        JSONObject meta_label = (JSONObject) meta.get("Time Series (Daily)");
+        JSONObject meta_date = (JSONObject) meta1.get("2021-07-01");
+        String meta_price = meta2.getString("1. open");
+        System.out.println(meta_price);
 
     }
 }
